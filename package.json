@@ -2,8 +2,6 @@
     "name": "website_data_fabric",
     "version": "1.0.0",
     "scripts": {
-        "build": "echo \"index.html\" && exit 1",
-        "test": "echo \"index.html\" && exit 1",
         "start": "node index.js"
     },
     "repository": {
