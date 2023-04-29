@@ -17,11 +17,46 @@
 </head>
 <h1>Halo! welcome to data fabric website</h1>
 <h2>Lets check our business insight!</h2>
-<h3>Business insight</h3>
 
 <body>
-    <script src="frontend/libraries/jquery/jquery-3.4.1.min.js"></script>
+    <script src="frontend/libraries/jquery/jquery-3.6.4.min.js"></script>
     <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+
+    <!-- for aggregate data -->
+    <h1>Upload your data here!</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload and Aggregate">
+    </form>
+    <div id="result"></div>
+    <script>
+        // Optional: Use JavaScript to handle form submission and display results
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var form = event.target;
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.onload = function() {
+                document.querySelector('#result').innerHTML = xhr.responseText;
+            };
+            xhr.send(new FormData(form));
+        });
+    </script>
+    <pre id="aggregateResult"></pre>
+    <script>
+        // JavaScript code for fetching and displaying aggregated data
+        const aggregateResult = document.getElementById('aggregateResult');
+
+        window.onload = async() => {
+            const response = await fetch('/aggregate', {
+                method: 'POST'
+            });
+            const data = await response.text();
+            aggregateResult.textContent = data;
+        };
+    </script>
+    <!-- for aggregate data -->
+
     <h1>My Tableau Visualization</h1>
     <div id='tableauViz'></div>
     <script>
