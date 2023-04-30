@@ -15,12 +15,22 @@
         }
     </style>
 </head>
-<h1>Halo! welcome to data fabric website</h1>
-<h2>Lets check our business insight!</h2>
+<link rel="stylesheet" href="frontend/styles/main.css" />
 
 <body>
     <script src="frontend/libraries/jquery/jquery-3.6.4.min.js"></script>
     <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+
+    <div class="container">
+        <nav class="row navbar navbar-expand-lg navbar-light bg-white">
+            <a href="#" class="navbar-brand">
+                <img src="frontend/images/df_logo.png" alt="Logo Data Fabric" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" rel="button" data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
 
     <!-- for aggregate data -->
     <h1>Upload your data here!</h1>
@@ -60,7 +70,7 @@
     <h1>My Tableau Visualization</h1>
     <div id='tableauViz'></div>
     <script>
-        var vizUrl = 'https://public.tableau.com/shared/S848998QX?:display_count=n&:origin=viz_share_link';
+        var vizUrl = 'https://public.tableau.com/views/service_filter_visualization/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link';
         var vizContainer = document.getElementById('tableauViz');
         var options = {
             width: '100%',
