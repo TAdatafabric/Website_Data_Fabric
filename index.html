@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
     <script src='https://public.tableau.com/javascripts/api/tableau-2.min.js'></script>
     <style>
         #tableauViz {
             width: 100%;
             height: 500px;
         }
+        
+        h1 {
+            font-family: lora, serif;
+            font-weight: 700;
+            font-size: 37px;
+            font-style: bold;
+        }
     </style>
+    <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="frontend/styles/main.css" />
 </head>
-<link rel="stylesheet" href="frontend/styles/main.css" />
 
 <body>
-    <script src="frontend/libraries/jquery/jquery-3.6.4.min.js"></script>
-    <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
-
     <div class="container">
         <nav class="row navbar navbar-expand-lg navbar-light bg-white">
             <a href="#" class="navbar-brand">
@@ -29,8 +33,21 @@
             <button class="navbar-toggler navbar-toggler-right" rel="button" data-toggle="collapse" data-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto mr-3">
+                    <li class="nav-item mx-md-2"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item mx-md-2"><a href="#" class="nav-link">Tentang</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
+    <script src="frontend/libraries/jquery/jquery-3.6.4.min.js"></script>
+    <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+
+    <h1>Hadirkan Visualisasi Data
+        <br> Pengguna Layanan Telekomunikasi by XL
+    </h1>
 
     <!-- for aggregate data -->
     <h1>Upload your data here!</h1>
